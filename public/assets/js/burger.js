@@ -21,11 +21,11 @@ $(function () {
     $(".eatburger").on("click", function (event) {
         event.preventDefault();
 
-        var id = $(this).data("id");
+        var id = $(this).attr("data-id");
         var devouredState = {
             devoured: 1
         };
-
+        console.log(id)
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: devouredState
