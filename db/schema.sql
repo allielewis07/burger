@@ -1,14 +1,14 @@
-DROP DATABASE IF EXISTS  burgers_db;
-CREATE DATABASE burgers_db;
-USE burgers_db; -- Create a new table called 'TableName' in schema 'SchemaName'
--- Drop the table if it already exists
+CREATE DATABASE
+if NOT EXISTS burgers_db;
+USE burgers_db;
 
--- Create the table in the specified schema
 CREATE TABLE burgers
 (
-    Id INT NOT NULL AUTO_INCREMENT , -- auto increment column
-    burger_name VARCHAR(255) NOT NULL ,
-    devoured BOOL DEFAULT false ,
-    PRIMARY KEY (id)
---     -- specify more columns here
-); 
+    id INT NOT NULL
+    AUTO_INCREMENT,
+    burger_name VARCHAR
+    (50) NOT NULL,
+    devoured BOOLEAN DEFAULT false,
+    PRIMARY KEY
+    (id)
+);

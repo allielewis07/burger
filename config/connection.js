@@ -1,18 +1,13 @@
-var mysql = require ("mysql");
-var connection;
-
-if(process.env.JAWSDB_URL){
+const mysql = require("mysql");
+if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else{
-connection = mysql.createConnection({
-    host:'localhost',
-    user: 'root',
-    password:'',
-    database: 'burger_db'
-})
+} else {
+    connection = mysql.createConnection({
+        host: "localhost",
+        user: "root",
+        password: "Homework1",
+        database: "burgers_db",
+    });
 }
-
-
-connection.connection();
-    module.exports = connection;
-    
+connection.connect();
+module.exports = connection;
